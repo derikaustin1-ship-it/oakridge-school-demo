@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    color: #0A2740;
+    background-color: #FAFAFA;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Utilities & Animations */
+.glass-nav {
+  background: rgba(10, 39, 64, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #C5A880 0%, #E6CA9F 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C5A880 0%, #D8BB93 100%);
+}
+
+.navy-gradient-bg {
+  background: linear-gradient(135deg, #0A2740 0%, #163B5C 100%);
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, transform, opacity, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF6E3;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0A2740;
+}
